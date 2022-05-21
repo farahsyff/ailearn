@@ -1,0 +1,298 @@
+.gridContainer {
+  overflow: hidden;
+  grid-row: 2;
+
+  width: 100%;
+  height: 1100px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 35% 25% 40%;
+}
+
+/*Content1*/
+#content1A {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+#content1A h1 {
+  height: 10%;
+  margin-top: 5%;
+  margin-bottom: 2%;
+
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+#content1A p {
+  height: auto;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+#content1B {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+#image1 {
+  width: 45%;
+  height: auto;
+
+  margin-left: 45%;
+  margin-right: 5vw;
+  margin-top: 100px;
+}
+
+#content1B p {
+  margin-left: 45%;
+  margin-right: 5vw;
+
+  text-align: center;
+}
+
+/*Content2*/
+#content2 {
+  grid-row: 2;
+  grid-column: 1 / span 2;
+}
+
+.splide {
+  margin: auto;
+  margin-bottom: 10px;
+  height: 90%;
+}
+
+.splide h1 {
+  margin-bottom: 20px;
+}
+
+.splide h2 {
+  font-size: 1em;
+}
+
+button.splide__pagination__page {
+  display: none;
+}
+
+button.splide__arrow {
+  background: none;
+}
+
+/*Content3*/
+#content3 {
+  grid-row: 3;
+  grid-column: 1 / span 2;
+}
+
+#content3 h1 {
+  margin-left: 5vw;
+  margin-bottom: 30px;
+}
+
+.linkPreview {
+  cursor: pointer;
+
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-bottom: 30px;
+
+  border-style: solid;
+  border-color: #4bcce9;
+  border-radius: 10px;
+
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+}
+
+.linkPreview img{
+  background-color: gray;
+
+  grid-column: 1;
+  grid-row: 1 / span 2;
+
+  margin: 10%;
+  width: 80%;
+  height: auto;
+}
+
+.linkPreview h2 {
+  margin-top: auto;
+  grid-column: 2;
+  text-align: left;
+}
+
+.linkPreview p {
+  text-align: left;
+
+  grid-column: 2;
+}
+
+button {
+  transition: background-color .3s ease;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+@media only screen and (max-width: 1048px) {
+  .gridContainer {
+    grid-template-rows: 45% 25% 30%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) { 
+.gridContainer {
+  grid-row: 2;
+
+  height: 1600px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 20% 20% 25% 35%;
+}
+
+/*Content1*/
+#content1A {
+  grid-row: 2;
+  grid-column: span 2;
+}
+
+#content1A h1 {
+  text-align: center;
+}
+#content1A p {
+  text-align: center;
+}
+#content1B {
+  grid-row: 1;
+  grid-column: span 2;
+}
+#image1 {
+  width: 45%;
+  height: auto;
+
+  margin-left: 30vw;
+  margin-right: 30vw;
+  margin-top: 32px;
+}
+#content1B p {
+  margin-left: 30vw;
+  margin-right: 30vw;
+}
+#content2 {
+  grid-row: 3;
+  grid-column: 1 / span 2;
+}
+#content3 {
+  grid-row: 4;
+}
+
+  .splide {
+    height: 80%;
+  }
+
+  .linkPreview {
+    grid-template-columns: 3fr 7fr;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .splide {
+    height: 75%;
+  }
+
+}
+
+/*Extra Small devices */
+@media only screen and (max-width: 550px) {
+  .gridContainer {
+    height: 2000px;
+    grid-template-rows: 15% 25% 15% 45%;
+  }
+
+  .linkPreview {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 30px;
+  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5fr 1fr 2fr;
+  }
+  .linkPreview img{
+    background-color: gray;
+    grid-row: 1;
+    grid-column: span 2;
+ 
+    margin: 16px auto;
+    width: 60%;
+    height: auto;
+  }
+  
+  .linkPreview h2 {
+    grid-row: 2;
+    grid-column: span 2;
+
+    text-align: center;
+  }
+  
+  .linkPreview p {
+    grid-row: 3;
+    grid-column: span 2;
+    
+    text-align: center;
+  }
+}
+
+/*Extra Extra Small devices */
+@media only screen and (max-width: 450px) {
+  .gridContainer {
+    height: 2400px;
+    grid-template-rows: 13% 22% 15% 50%;
+  }
+
+  #image1 {
+    width: 45%;
+    height: auto;
+  
+    margin-left: 28%;
+    margin-right: 30vw;
+    margin-top: 32px;
+  }
+  .splide {
+    height: 100%;
+  }
+
+  .linkPreview {
+    grid-template-rows: 2fr 1fr 2fr;
+  }
+}
+
+/*large Desktop*/
+@media only screen and (min-width: 1270px) {
+  .gridContainer {
+    height: 1400px;
+  }
+}
+
+/*4K Desktop*/
+@media only screen and (min-width: 2000px) {
+  h1 {
+    font-size: 350%;
+  }
+  h2 {
+    font-size: 250%;
+  }
+  p {
+    font-size: 200%;
+  }
+  .gridContainer {
+    height: 2200px;
+  }
+}

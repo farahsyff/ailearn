@@ -1,0 +1,309 @@
+/*Global*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlirnkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+  }
+
+  body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 6% 88% 6%;
+
+    height: 680px;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  p {
+    font-size: 1.1em;
+  }
+
+  /*Nav*/
+  #navPlaceholder {
+    grid-row: 1;
+    grid-column: 1 / span 2;
+  }
+
+  #nav {
+    position: fixed;
+
+    height: 10%;
+    width: 100%;
+
+    background-color: #4bcce9;
+    color: white;
+    z-index: 999;
+
+    display: grid;
+    grid-template-columns: 2fr 10fr 1fr 1fr;
+  }
+
+  #logo {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+
+    margin: auto;
+    margin-left: 3vw;
+  }
+
+  #home {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+
+    padding: auto;
+    display: grid;
+    align-content: center;
+  }
+
+  #home:hover {
+    color: orange;
+  }
+
+  #login {
+    grid-column: 4;
+    grid-row: 1 / span 2;
+
+    padding: auto;
+    display: grid;
+    align-content: center;
+  }
+
+  #searchForm {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+
+    margin: auto;
+    margin-left: 1vw;
+  }
+
+  #formNav {
+    background-color: white;
+    width: 20vw;
+    height: 35px;
+    border-radius: 5px;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
+  }
+
+  #query {
+    all: unset;
+    font: 1.5em system-ui;
+    color: black;
+    height: 40px;
+    width: 16vw;
+    margin-left: 1vw;
+  }
+
+  ::placeholder {
+    color: gray;
+    opacity: 0.7;
+    font-size: 1em;
+  }
+
+  #searchImg {
+    all: unset;
+    cursor: pointer;
+    margin-right: 0.5vw;
+    margin-left: auto;
+  }
+
+  #searchLogo {
+    height: 25px;
+    width: 25px;
+  }
+
+  /*Foot*/
+  #foot {
+    grid-row: 5;
+    grid-column: 1 / span 4;
+
+    background-color: #4bcce9;
+
+    color: white;
+
+    display: grid;
+    grid-template-columns: 10fr 1fr 1fr;
+  }
+
+  #reserved {
+    grid-column: 1;
+    margin: auto 3vw;
+  }
+
+  #yt {
+    width: 50px;
+    height: auto;
+    margin: auto;
+
+    margin-left: 4vw;
+  }
+
+  #ig {
+    width: 50px;
+    height: auto;
+    margin: auto;
+
+    margin-right: 4vw;
+  }
+
+  #foot a img {
+    width: 100%;
+    height: auto;
+  }
+
+/*content*/
+#content {
+    grid-column: 1 / span 4;
+    grid-row: 2;
+    display: grid;
+
+    width: 80%;
+
+    margin: auto;
+    margin-top: 64px;
+    margin-bottom: 0;
+
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 1fr 15fr;
+    grid-gap: 32px;
+}
+
+#profTitle {
+    grid-row: 1;
+    margin-bottom: 32px;
+}
+
+#profPic {
+    grid-row: 2;
+}
+
+#profPic img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#contentForm {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+#contentForm input {
+  width: 100%;
+  height: 32px;
+
+  font: 1.5em system-ui;
+  color: black;
+}
+
+a{
+  color: white;
+}
+
+#editButton {
+    grid-column: 2;
+    display: block;
+
+    margin-top: 16px;
+    width: 128px;
+    height: 32px;
+
+    font-size: 16px;
+    color: white;
+
+    background-color: #4bcce9;
+
+    border-radius: 12px;
+    border-style: none;
+}
+
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    body {
+      grid-template-rows: 6% 32% 22% 34% 6%;
+    }
+    #nav {
+      display: grid;
+      grid-template-columns: 2fr 10fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+
+      height: 15%;
+      width: 100%;
+    }
+
+    #logo {
+      grid-column: 1;
+      grid-row: 1;
+
+      margin: auto;
+      margin-left: 3vw;
+    }
+
+    #home {
+      grid-column: 3;
+      grid-row: 1;
+
+      margin: auto;
+      margin-right: 3vw;
+    }
+
+    #login {
+      grid-column: 4;
+      grid-row: 1;
+
+      margin: auto;
+      margin-right: 5vw;
+    }
+
+    #searchForm {
+      grid-column: 1 / span 4;
+      grid-row: 2;
+    }
+
+    #formNav {
+      width: 80vw;
+      height: 30px;
+    }
+
+  }
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (max-width: 768px) {
+    h1 {
+      font-size: 1.5em;
+    }
+    h2 {
+      font-size: 1em;
+    }
+    p {
+      font-size: 1em;
+    }
+
+    #nav {
+      grid-template-columns: 2fr 6fr 1fr 1fr;
+    }
+
+    #searchForm {
+      margin-left: 8vw;
+    }
+
+    #formNav {
+      width: 40vw;
+      height: 35px;
+    }
+
+    #query {
+      height: 40px;
+      width: 35vw;
+      margin-left: 1vw;
+    }
+  }

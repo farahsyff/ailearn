@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href='https://fonts.googleapis.com/css?family=Major Mono Display' rel='stylesheet'>
+      <link rel="stylesheet" href="../CSS/outline.css">
+      <link rel="stylesheet" href="../CSS/forum.css">
+      <script src="../external/jquery-3.6.0.js"></script>
+      <script src="../JS/fPageJS.js"></script>
+        <title>Forum</title>
+    </head>
+    <body>
+      <div class="navPlaceHolder"></div>
+      <div class="navBar">
+          <h1>aIlearn</h1>
+          <div id="searchForm">
+              <form role="search" id="form">
+                  <input type="search" id="query" name="q" placeholder="Cari..." aria-label="Search through site content">
+                  <button id="searchImg">
+                    <img id= "searchLogo" src="../resources/logos/logo search ailearn.png">
+                  </button>
+                </form>
+                <script>
+                    const f = document.getElementById('form');
+                    const q = document.getElementById('query');
+                    const google = 'https://www.google.com/search?q=site%3A+';
+                    const site = 'pagedart.com';
+
+                    f.addEventListener('submit', submitted);
+
+                    function submitted(event) {
+                    event.preventDefault();
+                    const url = google + site + '+' + q.value;
+                    const win = window.open(url, 'blank', height=500);
+                    win.focus();
+                    }
+                </script>
+          </div>
+
+          <!--Normal-->
+          <div class="firstNav activeNav">
+              <a id="home" href="1fPage.html"><span class="blot0"></span>Beranda</a>
+              <a id="login" href="#"><span class="blot0"></span>Masuk</a>
+          </div>
+
+
+          <!--Login-->
+          <div class="secNav">
+              <a class="landing" href="1fPage.html"><img src="../resources/logos/home.svg"></a>
+              <a class="forum" href="#"><img src="../resources/logos/forum.svg"></a>
+              <div class="user">
+                  <div class="userButton">
+                      <div class="userButton2"><img src="../resources/logos/user.svg"></div>
+                  </div>
+                  <div class="userMenu">
+                      <a class="user1" href="4checkProfile.html">Edit Profil</a>
+                      <a class="user2" href="#">Logout</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+        <div id="back">
+          <div class="container-button">
+            <div class="judul">
+              <h1>Forum Diskusi</h1>
+            </div>
+            <div class="button-bidang">
+              <a href="bikinforum.html" id="button1">Buat Forum</a>
+              <!--Dropdown-->
+              <div class="dropDownContainer">
+                  <div class="dropDownBar">
+                      <button class="dropDownButton">
+                          <h4>Bidang Penerapan A.I.</h4>
+                          <div class="dropDownArrow"><img src="../resources/logos/down-arrow.svg"></div>
+                      </button>
+                      <div class="dropDownMenu">
+                          <a href="forum.php?id=1" class="dropDownWrap"><h4>Analisis dalam Olahraga</h4></a>
+                          <a href="forum.php?id=6" class="dropDownWrap"><h4>Ilmu Kehidupan</h4></a>
+                          <a href="forum.php?id=11" class="dropDownWrap"><h4>Pemasaran</h4></a>
+                          <a href="forum.php?id=2" class="dropDownWrap"><h4>Analisis dalam Pertanian</h4></a>
+                          <a href="forum.php?id=7" class="dropDownWrap"><h4>Kasino</h4></a>
+                          <a href="forum.php?id=12" class="dropDownWrap"><h4>Pendidikan</h4></a>
+                          <a href="forum.php?id=3" class="dropDownWrap"><h4>Asuransi</h4></a>
+                          <a href="forum.php?id=4" class="dropDownWrap"><h4>Barang Konsumsi</h4></a>
+                          <a href="forum.php?id=8" class="dropDownWrap"><h4>Kesehatan</h4></a>
+                          <a href="forum.php?id=13" class="dropDownWrap"><h4>Perhotelan</h4></a>
+                          <a href="forum.php?id=5" class="dropDownWrap"><h4>Bisnis</h4></a>
+                          <a href="forum.php?id=9" class="dropDownWrap"><h4>Manufaktur</h4></a>
+                          <a href="forum.php?id=14" class="dropDownWrap"><h4>Perjalanan & Transportasi</h4></a>
+                          <a href="forum.php?id=10" class="dropDownWrap"><h4>Minyak & Gas</h4></a>
+                          <a href="forum.php?id=15" class="dropDownWrap"><h4>Telekomunikasi, Media, & Teknologi</h4></a>
+                      </div>
+                  </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="container">
+              <div class="kotak">
+                <a href="komen.html">
+                  <h2>Bidang</h2>
+                  <hr>
+                  <h2>Judul Forum</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, eos, ducimus, enim ipsam atque eligendi reprehenderit ipsa quisquam perspiciatis rerum dolor omnis consequuntur quo natus corrupti possimus fuga asperiores autem.</p>
+                  <div class="kotak-profil">
+                    <h3>Username</h3>
+                    <img src="../resources/images/mainLogo.png" width="40px" height="40px">
+                  </div>
+                </a>
+              </div>
+              <div class="kotak">
+                <a href="komen.html">
+                  <h2>Bidang</h2>
+                  <hr>
+                  <h2>Judul Forum</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, eos, ducimus, enim ipsam atque eligendi reprehenderit ipsa quisquam perspiciatis rerum dolor omnis consequuntur quo natus corrupti possimus fuga asperiores autem.</p>
+                  <div class="kotak-profil">
+                    <h3>Username</h3>
+                    <img src="../resources/images/mainLogo.png" width="40px" height="40px">
+                  </div>
+                </a>
+              </div>
+              <div class="kotak">
+                <a href="komen.html">
+                  <h2>Bidang</h2>
+                  <hr>
+                  <h2>Judul Forum</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, eos, ducimus, enim ipsam atque eligendi reprehenderit ipsa quisquam perspiciatis rerum dolor omnis consequuntur quo natus corrupti possimus fuga asperiores autem.</p>
+                  <div class="kotak-profil">
+                    <h3>Username</h3>
+                    <img src="../resources/images/mainLogo.png" width="40px" height="40px">
+                  </div>
+                </a>
+              </div>
+              <div class="kotak">
+                <a href="komen.html">
+                  <h2>Bidang</h2>
+                  <hr>
+                  <h2>Judul Forum</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, eos, ducimus, enim ipsam atque eligendi reprehenderit ipsa quisquam perspiciatis rerum dolor omnis consequuntur quo natus corrupti possimus fuga asperiores autem.</p>
+                  <div class="kotak-profil">
+                    <h3>Username</h3>
+                    <img src="../resources/images/mainLogo.png" width="40px" height="40px">
+                  </div>
+                </a>
+              </div>
+              <div class="kotak">
+                <a href="komen.html">
+                  <h2>Bidang</h2>
+                  <hr>
+                  <h2>Judul Forum</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, eos, ducimus, enim ipsam atque eligendi reprehenderit ipsa quisquam perspiciatis rerum dolor omnis consequuntur quo natus corrupti possimus fuga asperiores autem.</p>
+                  <div class="kotak-profil">
+                    <h3>Username</h3>
+                    <img src="../resources/images/mainLogo.png" width="40px" height="40px">
+                  </div>
+                </a>
+              </div>
+
+          </div>
+
+
+        </div>
+
+
+        <div class="footer">
+          <h3>&copy; 2021. All rights reserved.</h3>
+            <a class="igLink" href="https://www.instagram.com/"><img class="ig" src="../resources/logos/instagram.svg"></a>
+
+            <a class="ytLink" href="https://www.youtube.com/"><img class="yt" src="../resources/logos/youtube.svg"></a>
+
+          </div>
+    </body>
+</html>

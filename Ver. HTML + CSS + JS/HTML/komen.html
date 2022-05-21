@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href='https://fonts.googleapis.com/css?family=Major Mono Display' rel='stylesheet'>
+      <link rel="stylesheet" href="../CSS/outline.css">
+      <link rel="stylesheet" href="../CSS/komen.css">
+      <script src="../external/jquery-3.6.0.js"></script>
+      <script src="../JS/fPageJS.js"></script>
+        <title>Forum</title>
+    </head>
+    <body>
+      <div class="navPlaceHolder"></div>
+      <div class="navBar">
+          <h1>aIlearn</h1>
+          <div id="searchForm">
+              <form role="search" id="form">
+                  <input type="search" id="query" name="q" placeholder="Cari..." aria-label="Search through site content">
+                  <button id="searchImg">
+                    <img id= "searchLogo" src="../resources/logos/logo search ailearn.png">
+                  </button>
+                </form>
+                <script>
+                    const f = document.getElementById('form');
+                    const q = document.getElementById('query');
+                    const google = 'https://www.google.com/search?q=site%3A+';
+                    const site = 'pagedart.com';
+
+                    f.addEventListener('submit', submitted);
+
+                    function submitted(event) {
+                    event.preventDefault();
+                    const url = google + site + '+' + q.value;
+                    const win = window.open(url, 'blank', height=500);
+                    win.focus();
+                    }
+                </script>
+          </div>
+
+          <!--Normal-->
+          <div class="firstNav activeNav">
+              <a id="home" href="1fPage.html"><span class="blot0"></span>Beranda</a>
+              <a id="login" href="#"><span class="blot0"></span>Masuk</a>
+          </div>
+
+
+          <!--Login-->
+          <div class="secNav">
+              <a class="landing" href="1fPage.html"><img src="../resources/logos/home.svg"></a>
+              <a class="forum" href="#"><img src="../resources/logos/forum.svg"></a>
+              <div class="user">
+                  <div class="userButton">
+                      <div class="userButton2"><img src="../resources/logos/user.svg"></div>
+                  </div>
+                  <div class="userMenu">
+                      <a class="user1" href="4checkProfile.html">Edit Profil</a>
+                      <a class="user2" href="#">Logout</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+        <div class="back">
+          <div class="kotak-forum">
+            <div class="kotak-profil">
+              <div class="satu">
+                <img src="../resources/images/mainLogo.png" width="40px" height="40px">
+                <h3>Username</h3>
+              </div>
+              <div class="dua">
+                <h3>Nama Bidang</h3>
+              </div>
+            </div>
+            <hr>
+            <h2>Judul Forum</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quisquam perferendis id beatae, quasi neque tenetur incidunt tempora consequatur minima enim in recusandae, aspernatur fugit, quod optio sed. Officiis, autem minus id reiciendis cum. Esse itaque voluptates cupiditate neque vero corporis nostrum ullam minus pariatur adipisci aspernatur voluptate iusto sint illo sed eveniet, voluptatem est eum. Suscipit deleniti enim consequatur cumque maiores eos rem repudiandae ducimus numquam labore dignissimos nobis nisi saepe temporibus, aspernatur ex eius, nam, reiciendis voluptatum vel.</p>
+          </div>
+          <div class="judul-komentar">
+            <h1>Komentar</h1>
+          </div>
+
+          <div class="kotak-komen">
+            <form class="" action="" method="post">
+              <input type="hidden" name="id_forum" value="<?= $id;?>">
+              <input type="hidden" name="id_user" value="<?= $_COOKIE['key'];?>">
+              <textarea name="komentar" placeholder="Tambahkan Komentar..." required></textarea>
+              <div class="button">
+                <button type="submit" name="unggahkomentar">Tambahkan</button>
+              </div>
+            </form>
+          </div>
+
+            <div class="kotak-komen">
+              <div class="profil-komen">
+                <img src="../resources/images/mainLogo.png" width="40px" height="40px">
+                <h3>Username</h3>
+              </div>
+              <hr>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel atque vero, hic voluptatum. Natus magnam dolorem, quis blanditiis facilis, aperiam!</p>
+
+            </div>
+            <div class="kotak-komen">
+              <div class="profil-komen">
+                <img src="../resources/images/mainLogo.png" width="40px" height="40px">
+                <h3>Username</h3>
+              </div>
+              <hr>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel atque vero, hic voluptatum. Natus magnam dolorem, quis blanditiis facilis, aperiam!</p>
+
+            </div>
+            <div class="kotak-komen">
+              <div class="profil-komen">
+                <img src="../resources/images/mainLogo.png" width="40px" height="40px">
+                <h3>Username</h3>
+              </div>
+              <hr>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel atque vero, hic voluptatum. Natus magnam dolorem, quis blanditiis facilis, aperiam!</p>
+
+            </div>
+            <div class="kotak-komen">
+              <div class="profil-komen">
+                <img src="../resources/images/mainLogo.png" width="40px" height="40px">
+                <h3>Username</h3>
+              </div>
+              <hr>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel atque vero, hic voluptatum. Natus magnam dolorem, quis blanditiis facilis, aperiam!</p>
+
+            </div>
+
+
+          <div class="kosong">
+
+          </div>
+
+        </div>
+
+        <div class="footer">
+          <h3>&copy; 2021. All rights reserved.</h3>
+            <a class="igLink" href="https://www.instagram.com/"><img class="ig" src="../resources/logos/instagram.svg"></a>
+
+            <a class="ytLink" href="https://www.youtube.com/"><img class="yt" src="../resources/logos/youtube.svg"></a>
+
+          </div>
+    </body>
+</html>

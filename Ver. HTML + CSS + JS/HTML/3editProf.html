@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://fonts.googleapis.com/css?family=Major Mono Display' rel='stylesheet'>
+        <link rel="stylesheet" href="../CSS/outline.css">
+        <link rel="stylesheet" href="../CSS/editProfCSS.css">
+        <script src="../JS/editProfJS.js"></script>
+
+        <title>Edit Profile page</title>
+    </head>
+    <body>
+      <div class="navPlaceHolder"></div>
+      <div class="navBar">
+          <h1>aIlearn</h1>
+          <div id="searchForm">
+              <form role="search" id="form">
+                  <input type="search" id="query" name="q" placeholder="Cari..." aria-label="Search through site content">
+                  <button id="searchImg">
+                    <img id= "searchLogo" src="../resources/logos/logo search ailearn.png">
+                  </button>
+                </form>
+                <script>
+                    const f = document.getElementById('form');
+                    const q = document.getElementById('query');
+                    const google = 'https://www.google.com/search?q=site%3A+';
+                    const site = 'pagedart.com';
+
+                    f.addEventListener('submit', submitted);
+
+                    function submitted(event) {
+                    event.preventDefault();
+                    const url = google + site + '+' + q.value;
+                    const win = window.open(url, 'blank', height=500);
+                    win.focus();
+                    }
+                </script>
+          </div>
+
+          <!--Normal-->
+          <div class="firstNav activeNav">
+              <a id="home" href="1fPage.html"><span class="blot0"></span>Beranda</a>
+              <a id="login" href="login.html"><span class="blot0"></span>Masuk</a>
+          </div>
+
+
+          <!--Login-->
+          <div class="secNav">
+              <a class="landing" href="1fPage.html"><img src="../resources/logos/home.svg"></a>
+              <a class="forum" href="forum.html"><img src="../resources/logos/forum.svg"></a>
+              <div class="user">
+                  <div class="userButton">
+                      <div class="userButton2"><img src="../resources/logos/user.svg"></div>
+                  </div>
+                  <div class="userMenu">
+                      <a class="user1" href="4checkProfile.html">Edit Profil</a>
+                      <a class="user2" href="#">Logout</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+        <div class="footer">
+            <h3>&copy; 2021. All rights reserved.</h3>
+            <a class="igLink" href="https://www.instagram.com/"><img class="ig" src="../resources/logos/instagram.svg"></a>
+
+            <a class="ytLink" href="https://www.youtube.com/"><img class="yt" src="../resources/logos/youtube.svg"></a>
+
+          </div>
+        <div class="gridContainer">
+            <div class="profileContainer">
+                <h1 id="profTitle">Profil Anda</h1>
+                <div id="profPic">
+                    <img src="../resources/images/mainLogo.png">
+                </div>
+            </div>
+            <form class="contentForm">
+                <label for="name">Nama</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="name">Username</label><br>
+                <input type="text" id="username" name="username"><br>
+                <label for="email">Email</label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="email">Foto Profile</label><br>
+                <input type="email" id="foto" name="foto"><br>
+                <label for="pwd">Masukan Password</label><br>
+                <input type="password" id="pwd" name="pwd"><br>
+                <a href="#"><button id="editButton">Konfirmasi Edit</button></a>
+            </form>
+        </div>
+    </body>
+</html>

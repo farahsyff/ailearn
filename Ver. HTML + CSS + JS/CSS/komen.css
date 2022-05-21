@@ -1,0 +1,224 @@
+
+.back{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.kotak-forum{
+  margin: 50px auto;
+  width: 80%;
+  background: #FFFFFF;
+  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.kotak-profil{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.kotak-forum p{
+  text-align: justify;
+}
+
+.kotak-forum h2{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.kotak-profil .satu{
+  display: flex;
+  align-items: center;
+}
+.kotak-profil .satu img{
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.judul-komentar{
+  width: 80%;
+  margin: 10px auto;
+}
+
+.kotak-komen{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 10%;
+  width: 50%;
+  background: #FFFFFF;
+  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.kotak-komen textarea{
+  width: 100%;
+  height: 70px;
+  border-radius: 5px;
+  margin: 5px 0;
+  resize: none;
+  border: none;
+  outline: none;
+}
+
+.button{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button button{
+  width: 100px;
+  height: 30px;
+  background: #4BCCE9;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.profil-komen{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profil-komen img{
+  border-radius: 50%;
+}
+
+.profil-komen h3{
+  margin-left: 10px;
+}
+
+.kotak-komen p{
+  text-align: justify;
+  margin-top: 20px;
+}
+  * {box-sizing:border-box}
+
+  #fullSlide {
+    position: absolute;
+    right: 5vw;
+    top: 10vh;
+  }
+
+
+  /* The dots/bullets/indicators */
+  .dotContainer {
+    width: fit-content;
+    margin: auto;
+  }
+
+  .dot {
+    display: inline-block;
+
+    width: 16px;
+    height: 16px;
+    border: 2px solid;
+    border-radius: 100%;
+
+    transition: background-color .3s ease;
+  }
+  .dot:hover {
+    cursor: pointer;
+    background-color: white;
+  }
+  .activeDot {
+    background-color: white;
+  }
+
+  .kosong{
+    position: relative;
+    width: 100%;
+    height: 10px;
+  }
+
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  #firstSlide {
+    display: block;
+  }
+
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  @media screen and (max-width: 1000px){
+    .button-bidang{
+      width: 100%;
+      justify-content: flex-end;
+      margin-top: 10px;
+    }
+
+    .judul{
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 768px){
+    .kotak{
+      width: 98%;
+    }
+
+    .judul{
+      width: 40%;
+    }
+
+    .button-bidang{
+      width: 53%;
+
+    }
+
+    .dropDownMenu {
+      z-index: 999;
+
+      width: 400px;
+      height: 420px;
+
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(8, 1fr);
+
+  }
+
+
+  .button-bidang{
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+
+  .judul{
+    width: 100%;
+  }
+}
+
+  /* Small devices */
+  @media only screen and (max-width: 600px) {
+
+  }
+
+  /*Extra Small devices */
+  @media only screen and (max-width: 425px) {
+    form {
+      width: 100vw;
+    }
+  }
+  }

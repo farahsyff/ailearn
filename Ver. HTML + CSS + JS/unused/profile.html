@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../CSS/profileCSS.css">
+        <script src="../JS/profileJS.js"></script>
+
+        <title>Profile page</title>
+    </head>
+    <body>
+        <div id="navPlaceholder"></div>
+        <div id="nav">
+            <img id="logo" src="../resources/logos/logo ailearn.png">
+            <p id="home">Beranda</p>
+            <p id="login">Masuk</p>
+            <div id="searchForm">
+                <form role="search" id="formNav">
+                    <input type="search" id="query" name="q" placeholder="Cari..." aria-label="Search through site content">
+                    <button id="searchImg">
+                    <img id= "searchLogo" src="../resources/logos/logo search ailearn.png">
+                    </button>
+                </form>
+                <script>
+                    const f = document.getElementById('form');
+                    const q = document.getElementById('query');
+                    const google = 'https://www.google.com/search?q=site%3A+';
+                    const site = 'developer.mozilla.org';
+    
+                    f.addEventListener('submit', submitted);
+    
+                    function submitted(event) {
+                    event.preventDefault();
+                    const url = google + site + '+' + q.value;
+                    const win = window.open(url, 'blank', height=500);
+                    win.focus();
+                    }
+                </script>
+            </div>
+        </div>
+        <div id="content">
+            <h1 id="profTitle">Profil Anda</h1>
+            <div id="profPic">
+                <img src="../resources/images/aihealthcare1.jpg">
+            </div>
+            <form id="contentForm">
+                <label for="name">Nama</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="email">Email</label><br>
+                <input type="email" id="email" name="email">
+                <button id="editButton">Edit Profile</button>
+            </form>
+            
+        </div>
+        <div id="foot">
+            <h2 id="reserved">@2021, All rights reserved.</h1>
+            <a id="yt"><img src="../resources/logos/ikon youtube ailearn.png"></a>
+            <a id="ig"><img src="../resources/logos/ikon instagram ailearn.png"></a>
+        </div>
+    </body>
+</html>

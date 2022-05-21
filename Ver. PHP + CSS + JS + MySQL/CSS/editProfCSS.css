@@ -1,0 +1,155 @@
+/*Global*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlirnkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-sizing: border-box;
+}
+
+.gridContainer {
+  height: 95vh;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+}
+
+/*content1*/
+.profileContainer {
+  grid-row: 1;
+  grid-column: 1;
+
+  margin: auto;
+  margin-top: 64px;
+}
+
+#profTitle {
+  margin-bottom: 16px;
+  text-align: center;
+
+  font-size: 150%;
+}
+
+#profPic img {
+  display: flex;
+  margin: auto;
+
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+}
+
+
+/*content2*/
+.contentForm {
+  grid-row: 1;
+  grid-column: 2;
+
+  margin: auto;
+  margin-top: 64px;
+  margin-left: 16px;
+
+  width: fit-content;
+  height: fit-content;
+}
+
+.contentForm input {
+  width: 50vw;
+  height: 32px;
+
+  font: 1.5em system-ui;
+  color: black;
+
+  border: 1px solid gainsboro;
+  background-color: rgb(240, 240, 240);
+
+  opacity: 0.8;
+  box-shadow: 4px 4px 16px -6px grey;
+
+  margin: 8px auto;
+
+  transition: all .3s ease;
+}
+
+.contentForm input[type="file"]{
+  font : 1em system-ui;
+}
+
+.contentForm a{
+  color: white;
+}
+
+.contentForm input:focus {
+  outline: none;
+  opacity: 1;
+}
+
+#editButton {
+  cursor: pointer;
+  display: inline-block;
+
+  margin-top: 16px;
+  width: 128px;
+  height: 32px;
+
+  font-size: 16px;
+
+  background-color: #4bcce9;
+  color: white;
+
+  box-shadow: 4px 4px 16px -6px grey;
+
+  border-radius: 8px;
+  border-style: none;
+}
+
+#editButton:active {
+  box-shadow: 2px 2px 16px -16px grey;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .gridContainer {
+    height: 95vh;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr 6fr;
+  }
+
+  .profileContainer {
+    grid-row: 1;
+    grid-column: 1;
+
+    margin: auto;
+    margin-top: 32px;
+  }
+
+  .contentForm {
+    grid-row: 2;
+    grid-column: 1;
+
+    margin: auto;
+    margin-top: 16px;
+  }
+
+  .contentForm input {
+    width: 80vw;
+  }
+}
+
+@media only screen and (max-width: 3425px) {
+  .gridContainer {
+    height: 145vh;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 375px) {
+  .gridContainer {
+    height: 135vh;
+  }
+  .contentForm input {
+    width: 95vw;
+  }
+
+}
